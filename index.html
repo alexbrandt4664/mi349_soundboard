@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sound Board</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="soundboard.js"></script>
+    </head>
+    <body>
+        <h1>Star Wars Sound Board</h1>
+        <div id="menu">
+            <div class="button_box" id="lightsaberBox">
+                <button onmouseover="playLightsaber()" onclick="playLightsaber()">Turn on Your Lightsaber</button>
+                <audio src="lightsaber.wav" id="lightsaberAudio" onended=resetBackground(this)></audio>
+                <img src="luke.jpg" alt="Luke Skywalker"/>
+            </div>
+            <div class="button_box" id="chewieBox">
+                <button onmouseover="playChewbacca()" onclick="playChewbacca()" onended=resetBackground(this)>Make Chewbacca Roar</button>
+                <audio src="wookie.wav" id="chewieAudio" onended=resetBackground(this)></audio>
+                <img src="chewbacca.png" alt="Chewbacca"/>
+            </div>
+            <div class="button_box" id="r2Box">
+                <button onmouseover="playR2()" onclick="playR2()">Make R2-D2 Beep</button>
+                <audio src="r2d2.wav" id="r2Audio" onended=resetBackground(this)></audio>
+                <img src="r2d2.png" alt="R2-D2"/>
+            </div>  
+        </div>
+    </body>
+</html>
